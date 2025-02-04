@@ -17,8 +17,14 @@ function randomnumbers(count) {
     
     }
     console.log(`парні: ${evennum}`) 
-      console.log(`непарні: ${oddnum}`)  
+    console.log(`непарні: ${oddnum}`)
+    
+    // Тільки так придумала))) знаю, що не то, але ідей нема)))
+
+    console.log("парні " + (evennum / 10) * 100 + "%") // evennum ділимо на кількість виведених чисел і множимо на 100%
+    console.log("непарні " + (oddnum / 10) * 100 + "%")
 }
+
 randomnumbers(10);
 
 
