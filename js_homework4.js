@@ -20,12 +20,13 @@ function randomnumbers(count) {
     console.log(`непарні: ${oddnum}`)
     
     // Тільки так придумала))) знаю, що не то, але ідей нема)))
+    // До мене дійшло, і я його таки виправила, і тепер здається все правильно) 
 
-    console.log("парні " + (evennum / 10) * 100 + "%") // evennum ділимо на кількість виведених чисел і множимо на 100%
-    console.log("непарні " + (oddnum / 10) * 100 + "%")
+    console.log("парні " + (evennum / count) * 100 + "%") // evennum ділимо на кількість виведених чисел(count) і множимо на 100%
+    console.log("непарні " + (oddnum / count) * 100 + "%")
 }
 
-randomnumbers(10);
+randomnumbers(50);
 
 
 
