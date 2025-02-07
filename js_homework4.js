@@ -6,7 +6,7 @@ function randomnumbers(count) {
     let oddnum = 0;
     for (let i = 0; i < count; i++) {
         num = (Math.round(Math.random() * 900) + 100);
-        console.log(num);
+        // console.log(num);
 
         if (num % 2 == 0) {
             evennum++;
@@ -16,13 +16,10 @@ function randomnumbers(count) {
         }
     
     }
+    console.log(count) 
     console.log(`парні: ${evennum}`) 
     console.log(`непарні: ${oddnum}`)
-    
-    // Тільки так придумала))) знаю, що не то, але ідей нема)))
-    // До мене дійшло, і я його таки виправила, і тепер здається все правильно) 
-
-    console.log("парні " + (evennum / count) * 100 + "%") // evennum ділимо на кількість виведених чисел(count) і множимо на 100%
+    console.log("парні " + (evennum / count) * 100 + "%") 
     console.log("непарні " + (oddnum / count) * 100 + "%")
 }
 
