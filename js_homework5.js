@@ -5,16 +5,71 @@
 // Ну і вийшло щось таке))) але воно хоча б працює, навіть якщо додати щось в обєкт з числами)
 // Не іделаьно)) але в мене вже мозок кипить)
 
+// const services = {
+//   haircut: 60,
+//   shaving: 80,
+//   washing: 100,
+
+//   price() {
+
+//     const num = (Object.values(services));
+//     const result = num.filter(Number.isFinite)
+//     let sum = result;
+//     function sumnum(number) {
+//       let sum1 = 0
+//       for (let i = 0; i < number.length; i++) {
+//         sum1 += number[i];
+//       }
+//       console.log(sum1)
+//     }
+//     sumnum(sum)
+//   },
+  
+     
+//   minPrice() {
+
+//     const num = (Object.values(services));
+//     const result = num.filter(Number.isFinite)
+//     const array = result;
+//     const minElement = Math.min(...array);
+//     console.log(minElement);
+//   },
+
+//   maxPrice() {
+
+//     const num = (Object.values(services));
+//     const result = num.filter(Number.isFinite)
+//     const array = result;
+//     const maxElement = Math.max(...array);
+//     console.log(maxElement);
+//   }
+
+// }
+
+// services.price();
+// services.minPrice();
+// services.maxPrice();
+
+
+
+
+
+
 const services = {
-  haircut: 60,
-  shaving: 80,
-  washing: 100,
+  haircut: "60 грн",
+  shaving: "80 грн",
+  washing: "100 грн",
 
   price() {
-
-    const num = (Object.values(services));
-    const result = num.filter(Number.isFinite)
-    let sum = result;
+    
+    let count = [];
+    for (let key in services) {
+      if (typeof services[key] === "string") {
+        count.push(parseInt(services[key]));
+      }
+    }
+    // return (count)
+    let sum = count;
     function sumnum(number) {
       let sum1 = 0
       for (let i = 0; i < number.length; i++) {
@@ -23,22 +78,34 @@ const services = {
       console.log(sum1)
     }
     sumnum(sum)
-  },
-  
+         
      
+  },
+
+  
   minPrice() {
 
-    const num = (Object.values(services));
-    const result = num.filter(Number.isFinite)
+    let count = [];
+    for (let key in services) {
+      if (typeof services[key] === "string") {
+        count.push(parseInt(services[key]));
+      }
+    }
+    const result = count.filter(Number.isFinite)
     const array = result;
     const minElement = Math.min(...array);
     console.log(minElement);
   },
 
-  maxPrice() {
+ maxPrice() {
 
-    const num = (Object.values(services));
-    const result = num.filter(Number.isFinite)
+    let count = [];
+    for (let key in services) {
+      if (typeof services[key] === "string") {
+        count.push(parseInt(services[key]));
+      }
+    }
+    const result = count.filter(Number.isFinite)
     const array = result;
     const maxElement = Math.max(...array);
     console.log(maxElement);
@@ -46,18 +113,10 @@ const services = {
 
 }
 
-services.price();
+
+  services.price();
 services.minPrice();
 services.maxPrice();
-
-
-
-
-
-
-
-
-
 
 
 
