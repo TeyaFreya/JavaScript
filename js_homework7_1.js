@@ -25,6 +25,6 @@ let arr = [
 
 
 const goodemail = arr.map((user) => user.email);
-const goodemail2 = goodemail.filter(email => email.match(/@(gmail\.com|yahoo\.com)$/));
+const goodemail2 = goodemail.filter(email => email.match(/^[A-Za-z0-9._+-]+@(gmail\.com|yahoo\.com)$/));
 
 console.log(goodemail2)
